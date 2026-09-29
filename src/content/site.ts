@@ -3,6 +3,8 @@
 // Blog posts live in ./blog as Markdown files.
 
 import headshot from './images/headshot.png'
+import claudeImage from './images/claude.jpg'
+import slackImage from './images/slack.jpg'
 
 export type LinkKind = 'github' | 'linkedin' | 'email' | 'scholar' | 'website'
 
@@ -26,7 +28,7 @@ export interface Project {
   summary: string
   tech: string[]
   links?: { label: string; href: string }[]
-  // Set to an image path (e.g. '/projects/foo.png' in /public) to replace the placeholder.
+  // Import an image from ./images, or use a path to a file in /public, to replace the placeholder.
   image?: string
 }
 
@@ -55,8 +57,8 @@ export const profile: Profile = {
   // Import an image from ./images (like the one above), or use a path to a file in /public.
   headshot,
   location: 'Fredericksburg, VA',
-  // Put your resume at public/cv.pdf and this link will work.
-  cvHref: '/cv.pdf',
+  // Path to a file in /public. Replace public/resume.pdf to update it.
+  cvHref: '/resume.pdf',
   bio: [
     "I'm a senior studying software engineering at the University of Mary Washington, where I focus on building scalable backend solutions. I like building software that is well-designed and useful to real people.",
     "I'm applying to graduate programs for Fall 2027, with interests in working inside large scale codebases and distributed systems. Outside of class I am a member of the Ultimate Frisbee club at UMW as well as a lab aide.",
@@ -78,33 +80,33 @@ export const education: Education[] = [
 
 export const projects: Project[] = [
   {
-    title: 'Project One',
+    title: 'UniMarket',
     status: 'In progress',
-    dates: '2026 – present',
+    dates: 'Dec 2025 – present',
     summary:
-      'A one or two sentence description of what the project does, what problem it solves, and what was interesting or hard about building it.',
-    tech: ['TypeScript', 'React', 'PostgreSQL'],
-    links: [
-      { label: 'Code', href: 'https://github.com/your-username/project-one' },
-      { label: 'Demo', href: '#' },
-    ],
+      'A mobile marketplace where college students buy and sell items with each other. The working prototype lets students browse listings, view item details, and post new listings with photos from the camera or library. A Spring Boot backend is in progress.',
+    tech: ['TypeScript', 'React Native', 'Expo', 'NativeWind'],
+    links: [{ label: 'Code', href: 'https://github.com/Nathan-Holmquist/UniMarket-Frontend' }],
   },
   {
-    title: 'Project Two',
-    status: 'Completed',
-    dates: 'Spring 2026',
+    title: 'AI Voice Assistant',
+    status: 'In progress',
+    dates: 'Sep 2026 – present',
     summary:
-      'Describe the goal, your role, and a concrete result — e.g. "cut query latency by 40%" or "used by 200 students in the intro course."',
-    tech: ['Python', 'PyTorch'],
-    links: [{ label: 'Code', href: 'https://github.com/your-username/project-two' }],
+      'An always-on voice assistant for a Raspberry Pi. It listens for a wake word, sends the question to Claude Haiku, and speaks the reply, starting playback before the reply has finished generating. It aims to start answering within 900 ms of the end of a question, and you can talk over it to interrupt.',
+    tech: ['Python', 'Claude API', 'Deepgram', 'WebSockets', 'Raspberry Pi'],
+    links: [{ label: 'Code', href: 'https://github.com/Nathan-Holmquist/AI-Assistant' }],
+    image: claudeImage,
   },
   {
-    title: 'Project Three',
+    title: 'RandomCoffeeBot',
     status: 'Completed',
-    dates: 'Fall 2025',
+    dates: 'Aug 2026',
     summary:
-      'A research, class, or hackathon project. Mention any paper, poster, or presentation that came out of it — admissions committees like to see these.',
-    tech: ['C++', 'CUDA'],
+      'A Slack bot I built for my workplace. A /pair command randomly pairs up everyone in the #random-coffee channel for a weekly coffee chat. It stores pairing history in SQLite so nobody gets the same partner twice within four weeks.',
+    tech: ['Python', 'Slack Bolt', 'SQLite'],
+    links: [{ label: 'Code', href: 'https://github.com/Nathan-Holmquist/RandomCoffeeBot' }],
+    image: slackImage,
   },
 ]
 

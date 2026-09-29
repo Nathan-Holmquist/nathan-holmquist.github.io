@@ -22,7 +22,7 @@ export function About() {
             </a>
           ))}
           <a className="btn btn-primary" href={profile.cvHref} target="_blank" rel="noreferrer">
-            <Icon name="file" /> Download CV
+            <Icon name="file" /> Download Resume
           </a>
         </div>
       </div>
