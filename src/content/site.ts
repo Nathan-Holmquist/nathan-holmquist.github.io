@@ -74,7 +74,7 @@ export const education: Education[] = [
     school: 'The University of Mary Washington',
     degree: 'B.S. in Computer Science',
     dates: '2023 – May 2027',
-    details: ['Relevant coursework: Algorithms, Operating Systems, Databases, Machine Learning'],
+    details: ['Relevant coursework: Algorithms, Operating Systems, Databases, Foundations for Data Science'],
   },
 ]
 
