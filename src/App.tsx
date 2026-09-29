@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { About } from './components/About'
-import { BlogIndex, BlogPost, LatestPosts } from './components/Blog'
+import { BlogIndex, BlogPost } from './components/Blog'
 import { Experience } from './components/Experience'
 import { Header } from './components/Header'
 import { Projects } from './components/Projects'
@@ -27,7 +27,8 @@ function App() {
             <About />
             <Projects />
             <Experience />
-            <LatestPosts />
+            {/* Hidden for now. To bring back, re-add LatestPosts to the Blog import above. */}
+            {/* <LatestPosts /> */}
           </>
         )}
         {route.page === 'blog' && <BlogIndex />}
