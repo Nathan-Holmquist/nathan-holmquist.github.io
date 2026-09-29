@@ -5,6 +5,7 @@
 import headshot from './images/headshot.jpg'
 import claudeImage from './images/claude.jpg'
 import slackImage from './images/slack.jpg'
+import resume from './resume.pdf'
 
 export type LinkKind = 'github' | 'linkedin' | 'email' | 'scholar' | 'website'
 
@@ -54,11 +55,9 @@ export interface Profile {
 export const profile: Profile = {
   name: 'Nathan Holmquist',
   tagline: 'Computer science student',
-  // Import an image from ./images (like the one above), or use a path to a file in /public.
-  headshot,
+  headshot, // imported
   location: 'Fredericksburg, VA',
-  // Path to a file in /public. Replace public/resume.pdf to update it.
-  cvHref: '/resume.pdf',
+  cvHref: resume,
   bio: [
     "I'm a senior studying computer science at the University of Mary Washington, where I focus on building scalable backend solutions. I like building software that is well-designed and useful to real people.",
     "I'm applying to graduate programs for Fall 2027, with interests in working inside large scale codebases and distributed systems. Outside of class I am a member of the Ultimate Frisbee club at UMW as well as a lab aide.",
