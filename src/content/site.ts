@@ -53,14 +53,14 @@ export interface Profile {
 
 export const profile: Profile = {
   name: 'Nathan Holmquist',
-  tagline: 'Software engineering student',
+  tagline: 'Computer science student',
   // Import an image from ./images (like the one above), or use a path to a file in /public.
   headshot,
   location: 'Fredericksburg, VA',
   // Path to a file in /public. Replace public/resume.pdf to update it.
   cvHref: '/resume.pdf',
   bio: [
-    "I'm a senior studying software engineering at the University of Mary Washington, where I focus on building scalable backend solutions. I like building software that is well-designed and useful to real people.",
+    "I'm a senior studying computer science at the University of Mary Washington, where I focus on building scalable backend solutions. I like building software that is well-designed and useful to real people.",
     "I'm applying to graduate programs for Fall 2027, with interests in working inside large scale codebases and distributed systems. Outside of class I am a member of the Ultimate Frisbee club at UMW as well as a lab aide.",
   ],
   links: [
@@ -72,7 +72,7 @@ export const profile: Profile = {
 export const education: Education[] = [
   {
     school: 'The University of Mary Washington',
-    degree: 'B.S. in Software Engineering',
+    degree: 'B.S. in Computer Science',
     dates: '2023 – May 2027',
     details: ['Relevant coursework: Algorithms, Operating Systems, Databases, Machine Learning'],
   },
