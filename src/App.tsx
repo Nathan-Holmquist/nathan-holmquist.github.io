@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { About } from './components/About'
-import { BlogIndex, BlogPost } from './components/Blog'
+// Blog is hidden for now. To bring it back, restore this import, the routes in <main>, and the Blog link in Header.
+// import { BlogIndex, BlogPost } from './components/Blog'
 import { Experience } from './components/Experience'
 import { Header } from './components/Header'
 import { Projects } from './components/Projects'
@@ -22,17 +23,13 @@ function App() {
     <>
       <Header route={route} />
       <main className="container">
-        {route.page === 'home' && (
-          <>
-            <About />
-            <Projects />
-            <Experience />
-            {/* Hidden for now. To bring back, re-add LatestPosts to the Blog import above. */}
-            {/* <LatestPosts /> */}
-          </>
-        )}
-        {route.page === 'blog' && <BlogIndex />}
-        {route.page === 'post' && <BlogPost slug={route.slug} />}
+        {/* While the blog is hidden, every route (including #/blog) renders the home page. */}
+        <About />
+        <Projects />
+        <Experience />
+        {/* <LatestPosts /> */}
+        {/* {route.page === 'blog' && <BlogIndex />} */}
+        {/* {route.page === 'post' && <BlogPost slug={route.slug} />} */}
       </main>
       <footer className="site-footer container">
         <span className="footer-links">

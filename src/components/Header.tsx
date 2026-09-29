@@ -8,7 +8,6 @@ const sections = [
 ]
 
 export function Header({ route }: { route: Route }) {
-  const onBlog = route.page === 'blog' || route.page === 'post'
   return (
     <header className="site-header">
       <nav className="container nav">
@@ -23,11 +22,7 @@ export function Header({ route }: { route: Route }) {
               </a>
             </li>
           ))}
-          <li>
-            <a href="#/blog" aria-current={onBlog ? 'page' : undefined}>
-              Blog
-            </a>
-          </li>
+          {/* Blog link hidden for now. */}
           <li>
             <a className="nav-cv" href={profile.cvHref} target="_blank" rel="noreferrer">
               CV

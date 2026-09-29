@@ -2,7 +2,7 @@
 // Edit this file to update the About, Projects, and Experience sections.
 // Blog posts live in ./blog as Markdown files.
 
-import headshot from './images/headshot.png'
+import headshot from './images/headshot.jpg'
 import claudeImage from './images/claude.jpg'
 import slackImage from './images/slack.jpg'
 
